@@ -2683,7 +2683,11 @@
 
         .wrapper > .sponsors {
             margin: 0 auto;
-			width: 100%;
+            width: 90%;
+        }
+
+        .wrapper > .img.resize {
+            width: 90%;
         }
 
 		.wrapper.style1 {
