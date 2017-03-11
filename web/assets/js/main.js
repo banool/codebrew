@@ -14,6 +14,46 @@
 		xsmall:	'(max-width: 480px)'
 	});
 
+	var height = window.innerHeight;
+	var width = window.innerWidth;
+	var timelineOffset = $("#timeline-section").offset();
+	var timelineHeight = $("#timeline-outer-wrapper").height();
+
+	updateTimeline = function(){
+		timelineTop = $(window).scrollTop() - timelineOffset.top;
+		active = 
+			   ($(window).scrollTop() - timelineOffset.top >= 0)
+			&& ($(window).scrollTop() - timelineOffset.top <= timelineHeight);
+
+		if(timelineTop < 0){
+			$('#timeline-outer-wrapper > h1').css({
+				top: '0',
+				position: 'relative',
+			});
+		}else if(timelineTop > timelineHeight - height){
+			$('#timeline-outer-wrapper > h1').css({
+				top: (timelineHeight - height).toString() + 'px',
+				position: 'relative',
+			});
+		}else if(timelineTop >= 0 && timelineTop <= timelineHeight){
+			$('#timeline-outer-wrapper > h1').css({
+				top: '80px',
+				position: 'fixed',
+			});
+		}
+	}
+
+	$(window).scroll(function(){
+		updateTimeline();
+	});
+
+	$(window).resize(function(){
+		height = window.innerHeight;
+		width = window.innerWidth;
+		timelineOffset = $("#timeline-section").offset();
+		timelineHeight = $("#timeline-outer-wrapper").height();
+	});
+
 	$(function() {
 
 		var	$window = $(window),
