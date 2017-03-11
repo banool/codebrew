@@ -19,7 +19,7 @@
 	var timelineOffset = $("#timeline-section").offset();
 	var timelineHeight = $("#timeline-outer-wrapper").height();
 
-	timelineTop = function(){
+	calTimelineTop = function(){
 		if(width > 1280){
 			return "6.5em";
 		}else if(width > 736){
@@ -46,7 +46,7 @@
 			});
 		}else if(timelineTop >= 0 && timelineTop <= timelineHeight){
 			$('#timeline-outer-wrapper > h1').css({
-				top: timelineTop(),
+				top: calTimelineTop(),
 				position: 'fixed',
 			});
 		}
