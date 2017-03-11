@@ -22,10 +22,8 @@
 	calTimelineTop = function(){
 		if(width > 1280){
 			return "6.5em";
-		}else if(width > 736){
-			return "5em";
 		}
-		return "2.5em";
+		return "5em";
 	}
 
 	updateTimeline = function(){
