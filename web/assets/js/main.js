@@ -19,6 +19,15 @@
 	var timelineOffset = $("#timeline-section").offset();
 	var timelineHeight = $("#timeline-outer-wrapper").height();
 
+	timelineTop = function(){
+		if(width > 1280){
+			return "6.5em";
+		}else if(width > 736){
+			return "5em";
+		}
+		return "2.5em";
+	}
+
 	updateTimeline = function(){
 		timelineTop = $(window).scrollTop() - timelineOffset.top;
 		active = 
@@ -37,7 +46,7 @@
 			});
 		}else if(timelineTop >= 0 && timelineTop <= timelineHeight){
 			$('#timeline-outer-wrapper > h1').css({
-				top: '80px',
+				top: timelineTop(),
 				position: 'fixed',
 			});
 		}
