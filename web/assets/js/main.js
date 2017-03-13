@@ -44,6 +44,7 @@
 			});
 			$('#timeline').css({
 				top: '0',
+				left: '0',
 				position: 'relative',
 			});
 		}else if(timelineTop > timelineHeight - height){
@@ -53,6 +54,7 @@
 			});
 			$('#timeline').css({
 				top: (timelineHeight - height + 32).toString() + 'px',
+				left: '0',
 				position: 'relative',
 			});
 		}else if(timelineTop >= 0 && timelineTop <= timelineHeight){
