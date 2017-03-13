@@ -19,21 +19,28 @@
 	var timelineOffset = $("#timeline-section").offset();
 	var timelineHeight = $("#timeline-outer-wrapper").height();
 
-	calTimelineTop = function(){
+	calTimelineTitleTop = function(){
 		if(width > 1280){
 			return "6.5em";
 		}
 		return "5em";
 	}
+	calTimelineTop = function(){
+		if(width > 1280){
+			return "8.5em";
+		}
+		return "7em";
+	}
 
 	updateTimeline = function(){
 		timelineTop = $(window).scrollTop() - timelineOffset.top;
-		active = 
-			   ($(window).scrollTop() - timelineOffset.top >= 0)
-			&& ($(window).scrollTop() - timelineOffset.top <= timelineHeight);
 
 		if(timelineTop < 0){
 			$('#timeline-outer-wrapper > h1').css({
+				top: '0',
+				position: 'relative',
+			});
+			$('#timeline').css({
 				top: '0',
 				position: 'relative',
 			});
@@ -42,8 +49,16 @@
 				top: (timelineHeight - height).toString() + 'px',
 				position: 'relative',
 			});
+			$('#timeline').css({
+				top: (timelineHeight - height + 32).toString() + 'px',
+				position: 'relative',
+			});
 		}else if(timelineTop >= 0 && timelineTop <= timelineHeight){
 			$('#timeline-outer-wrapper > h1').css({
+				top: calTimelineTitleTop(),
+				position: 'fixed',
+			});
+			$('#timeline').css({
 				top: calTimelineTop(),
 				position: 'fixed',
 			});
