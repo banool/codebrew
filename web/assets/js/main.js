@@ -18,6 +18,7 @@
 	var width = window.innerWidth;
 	var timelineOffset = $("#timeline-section").offset();
 	var timelineHeight = $("#timeline-outer-wrapper").height();
+	var timelineWidth = $("#timeline-outer-wrapper").width();
 
 	calTimelineTitleTop = function(){
 		if(width > 1280){
@@ -33,7 +34,8 @@
 	}
 
 	updateTimeline = function(){
-		timelineTop = $(window).scrollTop() - timelineOffset.top;
+		var timelineTop = $(window).scrollTop() - timelineOffset.top;
+		var percent = timelineTop / (timelineHeight - height);
 
 		if(timelineTop < 0){
 			$('#timeline-outer-wrapper > h1').css({
@@ -60,6 +62,7 @@
 			});
 			$('#timeline').css({
 				top: calTimelineTop(),
+				left: (-percent * timelineWidth).toString() + 'px',
 				position: 'fixed',
 			});
 		}
@@ -74,6 +77,7 @@
 		width = window.innerWidth;
 		timelineOffset = $("#timeline-section").offset();
 		timelineHeight = $("#timeline-outer-wrapper").height();
+		timelineWidth = $("#timeline-outer-wrapper").width();
 	});
 
 	$(function() {
