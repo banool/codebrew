@@ -18,7 +18,8 @@
 	var width = window.innerWidth;
 	var timelineOffset = $("#timeline-section").offset();
 	var timelineHeight = $("#timeline-outer-wrapper").height();
-	var timelineWidth = $("#timeline-outer-wrapper").width();
+	//var timelineWidth = $("#timeline-outer-wrapper").width();
+	var timelineWidth = $("#timeline-actual").width();
 
 	calTimelineTitleTop = function(){
 		if(width > 1280){
@@ -32,17 +33,27 @@
 		}
 		return "7em";
 	}
-	calTimelineLeftAfter = function(){
+	calTimelineLeftAfter = function(asInt){
 		if(width > 1280){
-			return "0em";
+			return (asInt === true) ? 0 : "0em";
 		}
 		if(width > 736){
-			return "6em";
+			return (asInt === true) ? 6 : "6em";
 		}
 		if(width > 480){
-			return "4em";
+			return (asInt === true) ? 4 : "4em";
 		}
-		return "3em";
+		return (asInt === true) ? 3 : "3em";
+	}
+
+	function px(input) {
+		var emSize = parseFloat($("body").css("font-size"));
+		return (input / emSize);
+	}
+
+	function em(input) {
+		var emSize = parseFloat($("body").css("font-size"));
+		return (emSize * input);
 	}
 
 	updateTimeline = function(){
@@ -86,7 +97,7 @@
 			});
 			$('#timeline').css({
 				top: calTimelineTop(),
-				left: (-percent * timelineWidth).toString() + 'px',
+				left: (-percent * (timelineWidth - width + em(calTimelineLeftAfter(true)))).toString() + 'px',
 				position: 'fixed',
 			});
 		}
@@ -101,7 +112,7 @@
 		width = window.innerWidth;
 		timelineOffset = $("#timeline-section").offset();
 		timelineHeight = $("#timeline-outer-wrapper").height();
-		timelineWidth = $("#timeline-outer-wrapper").width();
+		timelineWidth = $("#timeline-actual").width();
 	});
 
 	$(function() {
