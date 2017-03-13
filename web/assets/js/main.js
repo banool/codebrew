@@ -14,6 +14,96 @@
 		xsmall:	'(max-width: 480px)'
 	});
 
+	var height = window.innerHeight;
+	var width = window.innerWidth;
+	var timelineOffset = $("#timeline-section").offset();
+	var timelineHeight = $("#timeline-outer-wrapper").height();
+	var timelineWidth = $("#timeline-outer-wrapper").width();
+
+	calTimelineTitleTop = function(){
+		if(width > 1280){
+			return "6.5em";
+		}
+		return "5em";
+	}
+	calTimelineTop = function(){
+		if(width > 1280){
+			return "8.5em";
+		}
+		return "7em";
+	}
+	calTimelineLeftAfter = function(){
+		if(width > 1280){
+			return "0em";
+		}
+		if(width > 736){
+			return "6em";
+		}
+		if(width > 480){
+			return "4em";
+		}
+		return "3em";
+	}
+
+	updateTimeline = function(){
+		var timelineTop = $(window).scrollTop() - timelineOffset.top;
+		var percent = timelineTop / (timelineHeight - height);
+
+		if(timelineTop < 0){
+			$('#timeline-outer-wrapper > h1').css({
+				top: '0',
+				position: 'relative',
+			});
+			$('#timeline').css({
+				top: '0',
+				left: '0',
+				position: 'relative',
+			});
+			$('#timeline-inner-wrapper').css({
+				top: '0',
+				left: '0px',
+				position: 'relative',
+			});
+		}else if(timelineTop > timelineHeight - height){
+			$('#timeline-outer-wrapper > h1').css({
+				top: (timelineHeight - height).toString() + 'px',
+				position: 'relative',
+			});
+			$('#timeline').css({
+				top: '0',
+				left: (-width).toString() + 'px' + '6em',
+				position: 'relative',
+			});
+			$('#timeline-inner-wrapper').css({
+				top: (timelineHeight - height).toString() + 'px',
+				left: '0px',
+				position: 'relative',
+			});
+		}else if(timelineTop >= 0 && timelineTop <= timelineHeight){
+			$('#timeline-outer-wrapper > h1').css({
+				top: calTimelineTitleTop(),
+				position: 'fixed',
+			});
+			$('#timeline').css({
+				top: calTimelineTop(),
+				left: (-percent * timelineWidth).toString() + 'px',
+				position: 'fixed',
+			});
+		}
+	}
+
+	$(window).scroll(function(){
+		updateTimeline();
+	});
+
+	$(window).resize(function(){
+		height = window.innerHeight;
+		width = window.innerWidth;
+		timelineOffset = $("#timeline-section").offset();
+		timelineHeight = $("#timeline-outer-wrapper").height();
+		timelineWidth = $("#timeline-outer-wrapper").width();
+	});
+
 	$(function() {
 
 		var	$window = $(window),
