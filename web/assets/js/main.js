@@ -82,7 +82,7 @@
 			});
 			$('#timeline').css({
 				top: '0',
-				left: (-width).toString() + 'px' + '6em',
+				left: (-(timelineWidth - width + em(calTimelineLeftAfter(true)))).toString() + 'px',
 				position: 'relative',
 			});
 			$('#timeline-inner-wrapper').css({
