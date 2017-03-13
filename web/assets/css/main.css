@@ -4924,39 +4924,66 @@
   transition: all 0.7s ease;
 }
 .timeline--inner-pin:nth-of-type(0) {
-  left: -10%;
+  left: -5%;
 }
 .timeline--inner-pin:nth-of-type(1) {
   left: 0%;
 }
 .timeline--inner-pin:nth-of-type(2) {
-  left: 10%;
+  left: 5.2631578947368425%;
 }
 .timeline--inner-pin:nth-of-type(3) {
-  left: 20%;
+  left: 10.526315789473685%;
 }
 .timeline--inner-pin:nth-of-type(4) {
-  left: 30%;
+  left: 15.789473684210527%;
 }
 .timeline--inner-pin:nth-of-type(5) {
-  left: 40%;
+  left: 21.05263157894737%;
 }
 .timeline--inner-pin:nth-of-type(6) {
-  left: 50%;
+  left: 26.315789473684212%;
 }
 .timeline--inner-pin:nth-of-type(7) {
-  left: 60%;
+  left: 31.578947368421055%;
 }
 .timeline--inner-pin:nth-of-type(8) {
-  left: 70%;
+  left: 36.8421052631579%;
 }
 .timeline--inner-pin:nth-of-type(9) {
-  left: 80%;
+  left: 42.10526315789474%;
 }
 .timeline--inner-pin:nth-of-type(10) {
-  left: 90%;
+  left: 47.36842105263158%;
 }
 .timeline--inner-pin:nth-of-type(11) {
+  left: 52.631578947368425%;
+}
+.timeline--inner-pin:nth-of-type(12) {
+  left: 57.89473684210527%;
+}
+.timeline--inner-pin:nth-of-type(13) {
+  left: 63.15789473684211%;
+}
+.timeline--inner-pin:nth-of-type(14) {
+  left: 68.42105263157896%;
+}
+.timeline--inner-pin:nth-of-type(15) {
+  left: 73.6842105263158%;
+}
+.timeline--inner-pin:nth-of-type(16) {
+  left: 78.94736842105263%;
+}
+.timeline--inner-pin:nth-of-type(17) {
+  left: 84.21052631578948%;
+}
+.timeline--inner-pin:nth-of-type(18) {
+  left: 89.47368421052633%;
+}
+.timeline--inner-pin:nth-of-type(19) {
+  left: 94.73684210526316%;
+}
+.timeline--inner-pin:nth-of-type(20) {
   left: 100%;
 }
 
