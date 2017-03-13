@@ -32,6 +32,18 @@
 		}
 		return "7em";
 	}
+	calTimelineLeftAfter = function(){
+		if(width > 1280){
+			return "0em";
+		}
+		if(width > 736){
+			return "6em";
+		}
+		if(width > 480){
+			return "4em";
+		}
+		return "3em";
+	}
 
 	updateTimeline = function(){
 		var timelineTop = $(window).scrollTop() - timelineOffset.top;
@@ -47,14 +59,24 @@
 				left: '0',
 				position: 'relative',
 			});
+			$('#timeline-inner-wrapper').css({
+				top: '0',
+				left: '0px',
+				position: 'relative',
+			});
 		}else if(timelineTop > timelineHeight - height){
 			$('#timeline-outer-wrapper > h1').css({
 				top: (timelineHeight - height).toString() + 'px',
 				position: 'relative',
 			});
 			$('#timeline').css({
-				top: (timelineHeight - height + 32).toString() + 'px',
-				left: '0',
+				top: '0',
+				left: (-width).toString() + 'px' + '6em',
+				position: 'relative',
+			});
+			$('#timeline-inner-wrapper').css({
+				top: (timelineHeight - height).toString() + 'px',
+				left: '0px',
 				position: 'relative',
 			});
 		}else if(timelineTop >= 0 && timelineTop <= timelineHeight){
