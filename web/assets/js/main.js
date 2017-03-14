@@ -14,7 +14,7 @@
 		xsmall:	'(max-width: 480px)'
 	});
 
-	var height = window.innerHeight;
+	/*var height = window.innerHeight;
 	var width = window.innerWidth;
 	var timelineOffset = $("#timeline-section").offset();
 	var timelineHeight = $("#timeline-outer-wrapper").height();
@@ -113,7 +113,7 @@
 		timelineOffset = $("#timeline-section").offset();
 		timelineHeight = $("#timeline-outer-wrapper").height();
 		timelineWidth = $("#timeline-actual").width();
-	});
+	});*/
 
 	$(function() {
 

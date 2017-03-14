@@ -2585,7 +2585,6 @@
 /* Table */
 
 	#timeline-outer-wrapper {
-		height: 3000px;
 	}
 
 	#timeline-inner-wrapper {
@@ -2597,6 +2596,7 @@
 	#timeline {
 		width: 100%;
 		padding: 0 2.5em;
+		overflow-y: auto;
 	}
 
 	@media screen and (max-width: 1280px) {
@@ -4898,7 +4898,7 @@
 .timeline {
   position: relative;
   display: block;
-  width: 2800px;
+  width: 1780px;
   height: 5rem;
   margin: 3rem auto;
   background-image: -webkit-linear-gradient(45deg, rgba(39, 161, 227, 0.65), rgba(231, 35, 42, 0.65));
@@ -4949,61 +4949,61 @@
   left: 0%;
 }
 .timeline--inner-pin:nth-of-type(2) {
-  left: 5.2631578947368425%;
+  left: 90px;
 }
 .timeline--inner-pin:nth-of-type(3) {
-  left: 10.526315789473685%;
+  left: 150px;
 }
 .timeline--inner-pin:nth-of-type(4) {
-  left: 15.789473684210527%;
+  left: 210px;
 }
 .timeline--inner-pin:nth-of-type(5) {
-  left: 21.05263157894737%;
+  left: 270px;
 }
 .timeline--inner-pin:nth-of-type(6) {
-  left: 26.315789473684212%;
+  left: 330px;
 }
 .timeline--inner-pin:nth-of-type(7) {
-  left: 31.578947368421055%;
+  left: 420px;
 }
 .timeline--inner-pin:nth-of-type(8) {
-  left: 36.8421052631579%;
+  left: 490px;
 }
 .timeline--inner-pin:nth-of-type(9) {
-  left: 42.10526315789474%;
+  left: 550px;
 }
 .timeline--inner-pin:nth-of-type(10) {
-  left: 47.36842105263158%;
+  left: 690px;
 }
 .timeline--inner-pin:nth-of-type(11) {
-  left: 52.631578947368425%;
+  left: 760px;
 }
 .timeline--inner-pin:nth-of-type(12) {
-  left: 57.89473684210527%;
+  left: 830px;
 }
 .timeline--inner-pin:nth-of-type(13) {
-  left: 63.15789473684211%;
+  left: 930px;
 }
 .timeline--inner-pin:nth-of-type(14) {
-  left: 68.42105263157896%;
+  left: 1000px;
 }
 .timeline--inner-pin:nth-of-type(15) {
-  left: 73.6842105263158%;
+  left: 1060px;
 }
 .timeline--inner-pin:nth-of-type(16) {
-  left: 78.94736842105263%;
+  left: 1200px;
 }
 .timeline--inner-pin:nth-of-type(17) {
-  left: 84.21052631578948%;
+  left: 1270px;
 }
 .timeline--inner-pin:nth-of-type(18) {
-  left: 89.47368421052633%;
+  left: 1390px;
 }
 .timeline--inner-pin:nth-of-type(19) {
-  left: 94.73684210526316%;
+  left: 1510px;
 }
 .timeline--inner-pin:nth-of-type(20) {
-  left: 100%;
+  left: 1630px;
 }
 
 .is-featured {
