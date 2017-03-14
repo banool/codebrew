@@ -1,5 +1,5 @@
 @import url(font-awesome.min.css);
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,700,300");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,700,300");
 
 /*
 	Archetype by Pixelarity
@@ -2393,20 +2393,24 @@
 			border-color: rgba(144, 144, 144, 0.25);
 		}
 
-        ul.features li:nth-child(4n - 3) h3:before {
+        ul.features li:nth-child(5n - 4) h3:before {
 			color: #dbd42c; /* NOTE trophy 1 here!!!! */
 		}
 
-		ul.features li:nth-child(4n - 2) h3:before {
-			color: #dbd42c; /* NOTE trophy 1 here!!!! */
+		ul.features li:nth-child(5n - 3) h3:before {
+			color: #BDBEC2; /* NOTE trophy 2 here!!!! */
 		}
 
-		ul.features li:nth-child(4n - 1) h3:before {
-			color: #c0c0c0; /* NOTE trophy two 2!!! */
+		ul.features li:nth-child(5n - 2) h3:before {
+			color: #A67D3D; /* NOTE trophy 3 here!!!! */
 		}
 
-		ul.features li:nth-child(3n) h3:before {
-			color: #A67D3D;
+        ul.features li:nth-child(5n - 1) h3:before {
+			color: #47BBC0; /* NOTE trophy 4 here!!!! */
+		}
+
+		ul.features li:nth-child(5n) h3:before {
+			color: #47BBC0; /* NOTE trophy 5 here!!!! */
 		}
 
 /* Posts */
@@ -2580,9 +2584,64 @@
 
 /* Table */
 
-	.table-wrapper {
+	#timeline-outer-wrapper {
+	}
+
+	#timeline-inner-wrapper {
 		-webkit-overflow-scrolling: touch;
-		overflow-x: auto;
+		overflow-x: hidden;
+		width: initial !important;
+	}
+
+	#timeline {
+		width: 100%;
+		padding: 0 2.5em;
+		overflow-y: auto;
+	}
+
+	/* Turn on custom 8px wide scrollbar */
+	#timeline::-webkit-scrollbar {
+		height: 8px; /* 1px wider than Lion. */
+		/* This is more usable for users trying to click it. */
+		background-color: rgba(0,0,0,0);
+		-webkit-border-radius: 100px;
+	}
+	/* hover effect for both scrollbar area, and scrollbar 'thumb' */
+	#timeline::-webkit-scrollbar:hover {
+		background-color: rgba(0, 0, 0, 0.09);
+	}
+
+	/* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
+	#timeline::-webkit-scrollbar-thumb:horizontal {
+		/* This is the EXACT color of Mac OS scrollbars. 
+			 Yes, I pulled out digital color meter */
+		background: rgba(0,0,0,0.5);
+		-webkit-border-radius: 100px;
+	}
+	#timeline::-webkit-scrollbar-thumb:horizontal:active {
+		background: rgba(0,0,0,0.61); /* Some darker color when you click it */
+		-webkit-border-radius: 100px;
+	}
+
+	@media screen and (max-width: 1280px) {
+		#timeline-inner-wrapper {
+			margin-right: -3em;
+			margin-left: -3em;
+		}
+	}
+
+	@media screen and (max-width: 736px) {
+		#timeline-inner-wrapper {
+			margin-right: -2em;
+			margin-left: -2em;
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		#timeline-inner-wrapper {
+			margin-right: -1.5em;
+			margin-left: -1.5em;
+		}
 	}
 
 	table {
@@ -2676,6 +2735,15 @@
 			margin: 0 auto;
 			width: 70em;
 		}
+
+        .wrapper > .sponsors {
+            margin: 0 auto;
+            width: 90%;
+        }
+
+        .wrapper > .img.resize {
+            width: 90%;
+        }
 
 		.wrapper.style1 {
 			background-color: #5f9dd2;
@@ -3519,10 +3587,10 @@
 
         /* NOTE */
 		.wrapper.cta {
-			background-image: -moz-linear-gradient(top, rgba(21, 27, 33, 0.6), rgba(21, 27, 33, 0.6)), url("images/earth.png"), -moz-linear-gradient(45deg, rgba(39, 161, 227, 0.65), rgba(231, 35, 42, 0.65)), url("../../images/earth.jpg");
-			background-image: -webkit-linear-gradient(top, rgba(21, 27, 33, 0.6), rgba(21, 27, 33, 0.6)), url("images/earth.png"), -webkit-linear-gradient(45deg, rgba(39, 161, 227, 0.65), rgba(231, 35, 42, 0.65)), url("../../images/earth.jpg");
-			background-image: -ms-linear-gradient(top, rgba(21, 27, 33, 0.6), rgba(21, 27, 33, 0.6)), url("images/earth.png"), -ms-linear-gradient(45deg, rgba(39, 161, 227, 0.65), rgba(231, 35, 42, 0.65)), url("../../images/earth.jpg");
-			background-image: linear-gradient(top, rgba(21, 27, 33, 0.6), rgba(21, 27, 33, 0.6)), url("images/earth.png"), linear-gradient(45deg, rgba(39, 161, 227, 0.65), rgba(231, 35, 42, 0.65)), url("../../images/earth.jpg");
+			background-image: -moz-linear-gradient(45deg, rgba(39, 161, 227, 0.65), rgba(231, 35, 42, 0.65)), url("../../images/earth.jpg"), -moz-linear-gradient(top, rgba(21, 27, 33, 0.6), rgba(21, 27, 33, 0.6)), url("../../images/earth.jpg");
+			background-image: -webkit-linear-gradient(45deg, rgba(39, 161, 227, 0.65), rgba(231, 35, 42, 0.65)), url("../../images/earth.jpg"), -webkit-linear-gradient(top, rgba(21, 27, 33, 0.6), rgba(21, 27, 33, 0.6)), url("../../images/earth.jpg");
+			background-image: -ms-linear-gradient(45deg, rgba(39, 161, 227, 0.65), rgba(231, 35, 42, 0.65)), url("../../images/earth.jpg"), -ms-linear-gradient(top, rgba(21, 27, 33, 0.6), rgba(21, 27, 33, 0.6)), url("../../images/earth.jpg");
+			background-image: linear-gradient(45deg, rgba(39, 161, 227, 0.65), rgba(231, 35, 42, 0.65)), url("../../images/earth.jpg"), linear-gradient(top, rgba(21, 27, 33, 0.6), rgba(21, 27, 33, 0.6)), url("../../images/earth.jpg");
 			background-position: center center;
 			background-size: auto, auto, cover, cover;
 			background-attachment: fixed, fixed, fixed, fixed;
@@ -3647,10 +3715,10 @@
 
         /* NOTE */
 		.wrapper.cta2 {
-			background-image: -moz-linear-gradient(top, rgba(21, 27, 33, 0.6), rgba(21, 27, 33, 0.6)), url("images/lab14.png"), -moz-linear-gradient(45deg, rgba(39, 161, 227, 0.65), rgba(231, 35, 42, 0.65)), url("../../images/lab14.jpg");
-			background-image: -webkit-linear-gradient(top, rgba(21, 27, 33, 0.6), rgba(21, 27, 33, 0.6)), url("images/lab14.png"), -webkit-linear-gradient(45deg, rgba(39, 161, 227, 0.65), rgba(231, 35, 42, 0.65)), url("../../images/lab14.jpg");
-			background-image: -ms-linear-gradient(top, rgba(21, 27, 33, 0.6), rgba(21, 27, 33, 0.6)), url("images/lab14.png"), -ms-linear-gradient(45deg, rgba(39, 161, 227, 0.65), rgba(231, 35, 42, 0.65)), url("../../images/lab14.jpg");
-			background-image: linear-gradient(top, rgba(21, 27, 33, 0.6), rgba(21, 27, 33, 0.6)), url("images/lab14.png"), linear-gradient(45deg, rgba(39, 161, 227, 0.65), rgba(231, 35, 42, 0.65)), url("../../images/lab14.jpg");
+			background-image: -moz-linear-gradient(45deg, rgba(39, 161, 227, 0.65), rgba(231, 35, 42, 0.65)), url("../../images/lab14.jpg"), -moz-linear-gradient(top, rgba(21, 27, 33, 0.6), rgba(21, 27, 33, 0.6)), url("../../images/lab14.jpg");
+			background-image: -webkit-linear-gradient(45deg, rgba(39, 161, 227, 0.65), rgba(231, 35, 42, 0.65)), url("../../images/lab14.jpg"), -webkit-linear-gradient(top, rgba(21, 27, 33, 0.6), rgba(21, 27, 33, 0.6)), url("../../images/lab14.jpg");
+			background-image: -ms-linear-gradient(45deg, rgba(39, 161, 227, 0.65), rgba(231, 35, 42, 0.65)), url("../../images/lab14.jpg"), -ms-linear-gradient(top, rgba(21, 27, 33, 0.6), rgba(21, 27, 33, 0.6)), url("../../images/lab14.jpg");
+			background-image: linear-gradient(45deg, rgba(39, 161, 227, 0.65), rgba(231, 35, 42, 0.65)), url("../../images/lab14.jpg"), linear-gradient(top, rgba(21, 27, 33, 0.6), rgba(21, 27, 33, 0.6)), url("../../images/lab14.jpg");
 			background-position: center center;
 			background-size: auto, auto, cover, cover;
 			background-attachment: fixed, fixed, fixed, fixed;
@@ -3878,7 +3946,7 @@
 		@media screen and (max-width: 736px) {
 
 			.wrapper {
-				padding: 2.5em 2em 0.5em 2em ;
+				padding: 5em 2em 0.5em 2em ;
 			}
 
 		}
@@ -3886,7 +3954,7 @@
 		@media screen and (max-width: 480px) {
 
 			.wrapper {
-				padding: 2.5em 1.5em 0.5em 1.5em ;
+				padding: 5em 1.5em 0.5em 1.5em ;
 			}
 
 		}
@@ -4850,6 +4918,206 @@
 
 		}
 
+/* Timeline */
+.timeline {
+  position: relative;
+  display: block;
+  width: 1780px;
+  height: 5rem;
+  margin: 3rem auto;
+  background-image: -webkit-linear-gradient(45deg, rgba(39, 161, 227, 0.65), rgba(231, 35, 42, 0.65));
+  background-image: linear-gradient(45deg, rgba(39, 161, 227, 0.65), rgba(231, 35, 42, 0.65));
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF880E4F', endColorstr='#FFF06292', GradientType=1);
+  border-radius: 5px;
+}
+.timeline--inner {
+  position: absolute;
+  display: block;
+  top: 50%;
+  right: 1rem;
+  left: 1rem;
+  height: 6px;
+  margin: 0;
+  margin-top: -3px;
+  margin-right: 110px;
+  border: 0;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2) inset;
+  border-radius: 1em;
+  z-index: 1;
+}
+.timeline--inner-pin {
+  color: #2F373F;
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: #2F373F;
+  border-radius: 100%;
+  cursor: pointer;
+  box-shadow: 0 0 0 2px #ffffff, 0 2px 6px rgba(0, 0, 0, 0.35);
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+.timeline--inner-pin > span {
+  top: 20px;
+  position: relative;
+}
+.timeline--inner-pin:nth-of-type(0) {
+  left: -5%;
+}
+.timeline--inner-pin:nth-of-type(1) {
+  left: 0%;
+}
+.timeline--inner-pin:nth-of-type(2) {
+  left: 90px;
+}
+.timeline--inner-pin:nth-of-type(3) {
+  left: 150px;
+}
+.timeline--inner-pin:nth-of-type(4) {
+  left: 210px;
+}
+.timeline--inner-pin:nth-of-type(5) {
+  left: 270px;
+}
+.timeline--inner-pin:nth-of-type(6) {
+  left: 330px;
+}
+.timeline--inner-pin:nth-of-type(7) {
+  left: 420px;
+}
+.timeline--inner-pin:nth-of-type(8) {
+  left: 490px;
+}
+.timeline--inner-pin:nth-of-type(9) {
+  left: 550px;
+}
+.timeline--inner-pin:nth-of-type(10) {
+  left: 690px;
+}
+.timeline--inner-pin:nth-of-type(11) {
+  left: 760px;
+}
+.timeline--inner-pin:nth-of-type(12) {
+  left: 830px;
+}
+.timeline--inner-pin:nth-of-type(13) {
+  left: 930px;
+}
+.timeline--inner-pin:nth-of-type(14) {
+  left: 1000px;
+}
+.timeline--inner-pin:nth-of-type(15) {
+  left: 1060px;
+}
+.timeline--inner-pin:nth-of-type(16) {
+  left: 1200px;
+}
+.timeline--inner-pin:nth-of-type(17) {
+  left: 1270px;
+}
+.timeline--inner-pin:nth-of-type(18) {
+  left: 1390px;
+}
+.timeline--inner-pin:nth-of-type(19) {
+  left: 1510px;
+}
+.timeline--inner-pin:nth-of-type(20) {
+  left: 1630px;
+}
+
+.is-featured {
+  width: 14px;
+  height: 14px;
+  font-size: 16px;
+}
+
+.is-normal {
+  width: 8px;
+  height: 8px;
+  font-size: 14px;
+}
+
+[data-title] {
+  white-space: nowrap;
+}
+[data-title]:after {
+  content: attr(data-title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  padding: 0.5rem;
+  color: #333;
+  font-size: .75rem;
+  font-style: normal;
+  background-color: #eee;
+  border-radius: 5px;
+  opacity: 0;
+  -webkit-transition: 0.25s cubic-bezier(0.905, -0.25, 0.52, 1);
+  transition: 0.25s cubic-bezier(0.905, -0.25, 0.52, 1);
+  -webkit-transform: translateX(-50%) rotate(5deg);
+          transform: translateX(-50%) rotate(5deg);
+  pointer-events: none;
+  z-index: 2;
+}
+[data-title]:hover:after {
+  margin-bottom: 18px;
+  opacity: 1;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+[data-title]:before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-bottom: -16px;
+  border: 10px solid transparent;
+  border-top-color: #eee;
+  opacity: 0;
+  -webkit-transition: 0.25s cubic-bezier(0.905, -0.25, 0.52, 1);
+  transition: 0.25s cubic-bezier(0.905, -0.25, 0.52, 1);
+  -webkit-transform: translateX(-50%) rotate(5deg);
+          transform: translateX(-50%) rotate(5deg);
+  pointer-events: none;
+  z-index: 3;
+}
+[data-title]:hover:before {
+  margin-bottom: -1px;
+  opacity: 1;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 .hide {
   display: none;
+}
+
+img.grayscale {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+, IE10 */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+    -webkit-transition: all .4s ease; /* Fade to color for Chrome and Safari */
+    -webkit-backface-visibility: hidden; /* Fix for transition flickering */
+}
+
+img.grayscale:hover {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+}
+
+svg {
+    background:url(http://4.bp.blogspot.com/-IzPWLqY4gJ0/T01CPzNb1KI/AAAAAAAACgA/_8uyj68QhFE/s400/a2cf7051-5952-4b39-aca3-4481976cb242.jpg);
+}
+
+svg image {
+    transition: all .6s ease;
+}
+
+svg image:hover {
+    opacity: 0;
 }
