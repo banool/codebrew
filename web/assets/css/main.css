@@ -4933,7 +4933,7 @@
           transform: translateY(-50%);
   background-color: #2F373F;
   border-radius: 100%;
-  cursor: help;
+  cursor: pointer;
   box-shadow: 0 0 0 2px #ffffff, 0 2px 6px rgba(0, 0, 0, 0.35);
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
