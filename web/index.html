@@ -19,7 +19,7 @@
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
 		<script>
-		/*var end = new Date('03/17/2017 10:1 AM');
+		var end = new Date('03/18/2017 09:00 AM');
 
 		    var _second = 1000;
 		    var _minute = _second * 60;
@@ -33,22 +33,22 @@
 		        if (distance < 0) {
 
 		            clearInterval(timer);
-		            document.getElementById('countdown').innerHTML = "It's here!";
+		            document.getElementById('countdown').innerHTML = "Start Coding!";
 
 		            return;
 		        }
 		        var days = Math.floor(distance / _day);
-		        var hours = Math.floor((distance % _day) / _hour);
-		        var minutes = Math.floor((distance % _hour) / _minute);
-		        var seconds = Math.floor((distance % _minute) / _second);
+		        var hours = ("0" + Math.floor((distance % _day) / _hour)).slice(-2);
+		        var minutes = ("0" + Math.floor((distance % _hour) / _minute)).slice(-2);
+		        var seconds = ("0" + Math.floor((distance % _minute) / _second)).slice(-2);
 
-		        document.getElementById('countdown').innerHTML = days + 'days ';
-		        document.getElementById('countdown').innerHTML += hours + 'hrs ';
-		        document.getElementById('countdown').innerHTML += minutes + 'mins ';
-		        document.getElementById('countdown').innerHTML += seconds + 'secs';
+		        //document.getElementById('countdown').innerHTML = days + 'days ';
+		        document.getElementById('countdown').innerHTML = hours + ':';
+		        document.getElementById('countdown').innerHTML += minutes + ':';
+		        document.getElementById('countdown').innerHTML += seconds;
 		    }
 
-		    timer = setInterval(showRemaining, 1000);*/
+		    timer = setInterval(showRemaining, 1000);
 		</script>
         <script>
         var status = "less";
@@ -104,14 +104,16 @@
 				<div class="content">
 					<div class="inner">
 						<header>
+							<h2>Start Coding in ...</h2>
+							<div id="countdown">Loading Timer...</div>
 							<h2>Codebrew 2017</h2>
-							<p>The best hackathon of the year is coming. Stay tuned.</br>17th - 19th March 2017.</p>
+							<!--<p>The best hackathon of the year is coming. Stay tuned.</br>17th - 19th March 2017.</p>-->
 						</header>
-						<ul class="actions">
-                            <!-- id="countdown" -->
+						<!--<ul class="actions">-->
+                            <!--<li style="min-width: 30%;font-size: 2em;"><a class="button huge" id="countdown" style="width: 100%;">Loading Timer...</a></li>-->
 							<!-- <li><a href="http://codebrew.eventbrite.com.au/" class="button huge" >Get Codebrew tickets now!</a></li> -->
-							<li><a class="button huge">Codebrew tickets have sold out :(</a></li>
-						</ul>
+							<!--<li><a class="button huge">Codebrew tickets have sold out :(</a></li>-->
+						<!--</ul>-->
 					</div>
 				</div>
 			</section>

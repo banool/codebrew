@@ -4291,12 +4291,20 @@
 
 		#banner .content {
 			position: absolute;
-			bottom: 0;
-			left: 0;
-			background-color: rgba(21, 27, 33, 0.6);
+			text-align: center;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			margin: 0 auto;
+			/*background-color: rgba(21, 27, 33, 0.6);*/
 			color: #ffffff;
 			padding: 6.5em 0 4.5em 0 ;
 			width: 100%;
+		}
+		#banner .content #countdown {
+			font-size: 100px;
+			line-height: 100px;
+			margin: 0 0 1em 0;
 		}
 
 			#banner .content input, #banner .content select, #banner .content textarea {
@@ -4404,7 +4412,7 @@
 			}
 
 				#banner .content > .inner header {
-					width: 75%;
+					width: 100%;
 				}
 
 				#banner .content > .inner .actions {
@@ -4497,6 +4505,10 @@
 
 			#banner .content {
 				padding: 2.5em 1.5em 0.5em 1.5em ;
+			}
+
+			#banner .content #countdown {
+				font-size: 50px;
 			}
 
 		}
