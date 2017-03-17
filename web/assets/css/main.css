@@ -4458,6 +4458,12 @@
 
 		@media screen and (max-width: 980px) {
 
+			#banner .content #countdown {
+				font-size: 60px;
+				line-height: 60px;
+				margin: 0 0 0.75em 0;
+			}
+
 			#banner .content > .inner {
 				-moz-flex-direction: column;
 				-webkit-flex-direction: column;
