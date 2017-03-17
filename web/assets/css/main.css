@@ -5139,5 +5139,8 @@ svg image:hover {
 
 .social-media{
 	font-size: 3em;
-	letter-spacing: 10px;
+}
+
+.social-media .fa {
+	margin: 0 10px;
 }
