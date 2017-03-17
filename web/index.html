@@ -20,7 +20,7 @@
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
 		<script>
-		var end = new Date('03/18/2017 09:00 AM');
+		var end = new Date('03/19/2017 03:30 PM');
 
 		    var _second = 1000;
 		    var _minute = _second * 60;
@@ -43,8 +43,8 @@
 		        var minutes = ("0" + Math.floor((distance % _hour) / _minute)).slice(-2);
 		        var seconds = ("0" + Math.floor((distance % _minute) / _second)).slice(-2);
 
-		        //document.getElementById('countdown').innerHTML = days + 'days ';
-		        document.getElementById('countdown').innerHTML = hours + ':';
+		        document.getElementById('countdown').innerHTML = (days) ? days + 'day<br>' : '';
+		        document.getElementById('countdown').innerHTML += hours + ':';
 		        document.getElementById('countdown').innerHTML += minutes + ':';
 		        document.getElementById('countdown').innerHTML += seconds;
 		    }
@@ -105,7 +105,7 @@
 				<div class="content">
 					<div class="inner">
 						<header>
-							<h2>Start Coding in ...</h2>
+							<h2>Stop Coding in ...</h2>
 							<div id="countdown">Loading Timer...</div>
 							<h2>Codebrew 2017</h2>
 							<h3>#codebrew17</h3>
@@ -234,7 +234,8 @@
                                 <i class="timeline--inner-pin is-normal" data-title="Floating Mentors Arrive"><span class="timeline--inner-pin-text">10:00am - 10:45am</span></i>
                                 <i class="timeline--inner-pin is-normal" data-title="Meal - Lunch (The other lunch from Sat)"><span class="timeline--inner-pin-text">12:30pm</span></i>
                                 <i class="timeline--inner-pin is-normal" data-title="Workshop - Pitching"><span class="timeline--inner-pin-text">2:00pm - 2:45pm</span></i>
-                                <i class="timeline--inner-pin is-normal" data-title="Pitching Event"><span class="timeline--inner-pin-text">5:00pm - 6:30pm</span></i>
+                                <i class="timeline--inner-pin is-normal" data-title="Stop Coding"><span class="timeline--inner-pin-text">3:30pm</span></i>
+                                <i class="timeline--inner-pin is-normal" data-title="Pitching Event"><span class="timeline--inner-pin-text">4:00pm - 6:30pm</span></i>
                                 <i class="timeline--inner-pin is-normal" data-title="Presentation & Closing"><span class="timeline--inner-pin-text">7:00pm - 7:30pm</span></i>
                                 <i class="timeline--inner-pin is-normal" data-title="Post Event Networking"><span class="timeline--inner-pin-text">7:30pm - 8:00pm</span></i>
                             </figure>
