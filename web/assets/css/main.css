@@ -4934,7 +4934,7 @@
 .timeline {
   position: relative;
   display: block;
-  width: 1900px;
+  width: 1960px;
   height: 5rem;
   margin: 3rem auto;
   background-image: -webkit-linear-gradient(45deg, rgba(39, 161, 227, 0.65), rgba(231, 35, 42, 0.65));
@@ -5039,10 +5039,13 @@
   left: 1510px;
 }
 .timeline--inner-pin:nth-of-type(20) {
-  left: 1630px;
+  left: 1570px;
 }
 .timeline--inner-pin:nth-of-type(21) {
-  left: 1750px;
+  left: 1690px;
+}
+.timeline--inner-pin:nth-of-type(22) {
+  left: 1810px;
 }
 
 .is-featured {
