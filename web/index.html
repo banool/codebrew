@@ -38,8 +38,9 @@
 
 		            return;
 		        }
-		        var days = Math.floor(distance / _day);
+		        var days = 0; //Math.floor(distance / _day);
 		        var hours = ("0" + Math.floor((distance % _day) / _hour)).slice(-2);
+		        var hours = ("0" + Math.floor(distance / _hour)).slice(-2);
 		        var minutes = ("0" + Math.floor((distance % _hour) / _minute)).slice(-2);
 		        var seconds = ("0" + Math.floor((distance % _minute) / _second)).slice(-2);
 
