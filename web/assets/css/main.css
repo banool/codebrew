@@ -2613,7 +2613,7 @@
 
 	/* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
 	#timeline::-webkit-scrollbar-thumb:horizontal {
-		/* This is the EXACT color of Mac OS scrollbars. 
+		/* This is the EXACT color of Mac OS scrollbars.
 			 Yes, I pulled out digital color meter */
 		background: rgba(0,0,0,0.5);
 		-webkit-border-radius: 100px;
@@ -4275,11 +4275,11 @@
 
 /* Banner */
 
-	#banner {
-		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, rgba(39, 161, 227, 0.65), rgba(231, 35, 42, 0.65)), url("../../images/group-2016.jpg");
-		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, rgba(39, 161, 227, 0.65), rgba(231, 35, 42, 0.65)), url("../../images/group-2016.jpg");
-		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, rgba(39, 161, 227, 0.65), rgba(231, 35, 42, 0.65)), url("../../images/group-2016.jpg");
-		background-image: url("images/overlay.png"), linear-gradient(45deg, rgba(39, 161, 227, 0.65), rgba(231, 35, 42, 0.65)), url("../../images/group-2016.jpg");
+	#banner { /* NOTE: Here is the href for the big cover photo */
+		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, rgba(39, 161, 227, 0.65), rgba(231, 35, 42, 0.65)), url("../../images/group-2017.jpg");
+		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, rgba(39, 161, 227, 0.65), rgba(231, 35, 42, 0.65)), url("../../images/group-2017.jpg");
+		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, rgba(39, 161, 227, 0.65), rgba(231, 35, 42, 0.65)), url("../../images/group-2017.jpg");
+		background-image: url("images/overlay.png"), linear-gradient(45deg, rgba(39, 161, 227, 0.65), rgba(231, 35, 42, 0.65)), url("../../images/group-2017.jpg");
 		background-position: center center;
 		background-size: auto, cover, cover;
 		background-attachment: fixed, fixed, fixed;
